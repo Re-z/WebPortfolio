@@ -25,3 +25,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background: black   ; /* MUST BE DELETED */
+    border: 2px solid #242424;
+}
+/*START HEADER */
+.header-wrapper {
+    min-width: 940px;
+    height: 386px; /* ??? */
+    outline: 1px solid gold;
+    background: url("img/bg1.png")repeat;
+}
+.main-header {
+    width: 940px;
+    outline: 1px dashed red;
+    margin: 0 auto;
+    height: 386px; /* ???? */
+}
+.intro-text {
+    font-family: Georgia-Italic, serif;
+    font-size: 18px;
+    color: #9B9B9B;
+    font-weight: 300;
+    padding-top: 47px; /* НЕ ПОЙМУ ПОЧЕМУ НЕ MARGIN TOP?? И ЕСЛИ ДЕЛАЮ MARGIN ТО НАЧИНАЕТ ЕХАТЬ .HEADER_WRAPPER */
+    letter-spacing: .3px;
+    outline: 1px solid white;
+    float: left;
+}
+.soc-btns {
+    float: right;
+    outline: 1px solid blue;
+    list-style: none;
+
+}
