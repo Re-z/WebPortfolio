@@ -1,0 +1,8 @@
+John R. Doe/.... Georgia Ital 18px
+Welcome to my (and all this block)...Georgia regular 
+Under small slider text - Georgia regular 14px
+Enter your name...Georgia reg 16px
+Submit - 18px
+John Doe near photo - Georgia reg
+Contact me 14px
+Copyright - Georgia regular 12px
