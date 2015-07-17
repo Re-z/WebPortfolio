@@ -35,6 +35,8 @@ body {
     height: 386px; /* ??? */
     outline: 1px solid gold;
     background: url("img/bg1.png")repeat;
+    border-bottom: 2px solid #202020;
+
 }
 .main-header {
     width: 940px;
@@ -47,14 +49,67 @@ body {
     font-size: 18px;
     color: #9B9B9B;
     font-weight: 300;
-    padding-top: 47px; /* НЕ ПОЙМУ ПОЧЕМУ НЕ MARGIN TOP?? И ЕСЛИ ДЕЛАЮ MARGIN ТО НАЧИНАЕТ ЕХАТЬ .HEADER_WRAPPER */
+    margin-top: 47px; /* НЕ ПОЙМУ ПОЧЕМУ НЕ MARGIN TOP?? И ЕСЛИ ДЕЛАЮ MARGIN ТО НАЧИНАЕТ ЕХАТЬ .HEADER_WRAPPER */
     letter-spacing: .3px;
-    outline: 1px solid white;
     float: left;
 }
 .soc-btns {
     float: right;
-    outline: 1px solid blue;
     list-style: none;
+    margin-top: 47px;
+}
+.soc-btns__item {
+    display: inline-block;
+    margin-right: 13px;
+}
+.soc-btns__item:last-of-type {
+    margin-right: 0;
+}
+.soc-btns__link {
+    background-image: url('img/sprites.png');
+    display: block;
+}
 
+/* START SOC-BTNS ICONS */
+.twitter-ico{
+    background-position: 0 -468px ;
+    width: 15px;
+    height: 15px;
+}
+.fb-ico{
+    background-position: 0 -336px ;
+    width: 8px;
+    height: 17px;
+}
+.v-ico{
+    background-position: 0 -402px ;
+    width: 13px;
+    height: 15px;
+}
+.be-ico{
+    background-position: 0 -299px;
+    width: 18px;
+    height: 17px;
+}
+.globe-ico{
+    background-position: 0 -171px;
+    width: 16px;
+    height: 20px;
+}
+/*END SOC-BTNS ICONS */
+.slider-wrapper {
+    height: 400px;
+    outline: 1px solid white;
+    width: 940px;
+    background-color: pink;
+    
+}
+.space {
+    min-width: 960px;
+    background-color: #1F1F1F;
+    outline: 1px dashed green;
+    height: 50px;
+}
+.clearfix {
+    clear: both;
 }
