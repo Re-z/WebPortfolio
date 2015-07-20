@@ -33,14 +33,12 @@ body {
 .header-wrapper {
     min-width: 940px;
     height: 386px; /* ??? */
-    outline: 1px solid gold;
     background: url("img/bg1.png")repeat;
     border-bottom: 2px solid #202020;
 
 }
 .main-header {
     width: 940px;
-    outline: 1px dashed red;
     margin: 0 auto;
     height: 386px; /* ???? */
 }
@@ -99,9 +97,8 @@ body {
 /*END SOC-BTNS ICONS */
 .slider-wrapper {
     height: 406px;
-    outline: 1px solid white;
     width: 940px;
-    background-color: pink;
+    background-color: darkslategrey;
     clear: both;
     position: relative;
     top: 49px;
@@ -111,8 +108,7 @@ body {
 .space {
     min-width: 960px;
     background-color: #1F1F1F;
-    outline: 1px dashed green;
-    height: 50px;
+    height: 27px;
 }
 .radio-wrapper {
     margin: 0 auto;
@@ -123,13 +119,12 @@ body {
 .description-wrapper {
     min-width: 940px;
     font-family: "Georgia", serif;
+    background-color: #202020;
     color: #9B9B9B;/* написал color родителю, а не всем h2 h1 по очереди. Так можно? */ 
-    height: 600px;/* must be del */
-    outline: 1px dashed yellow;
+    height: 615px;/* must be del */
 }
 .description {
     width: 940px;
-    outline: 1px dashed pink;
     margin: 0 auto;
     height: 600px; /*must be del */
 
@@ -137,7 +132,7 @@ body {
 .description__welcome-text {
     font-size: 25px;
     text-align: center;
-    padding-top: 148px; /*почему HE margin-top, a padding-top? */
+    padding-top: 170px; /*почему HE margin-top, a padding-top? */
     font-weight: 200;
 }
 .description__title {
@@ -148,7 +143,6 @@ body {
 }
 .description__text-block {
       display: inline-block;
-  outline: 1px solid red;
   margin-top: 57px;
   margin-right: 49px;
   width: 278px;
@@ -192,4 +186,61 @@ content: "";
   font-weight: 100;
   line-height: 22px;
   word-wrap: break-word;
+}
+.portfolio-wrapper {
+    background: url("img/bg1.png")repeat;
+    min-width: 940px;
+}
+.portfolio {
+    width: 940px;
+    margin: 0 auto;
+    height: 763px;/*must be del */
+}
+.imgs-wrapper {
+    width: 50%;/*must be del */
+    height: 675px;
+    padding-top: 66px; /* почему padding а не margin??? */
+}
+.imgs-wrapper__img {
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+.contacts-wrapper {
+    outline: 1px solid aquamarine;
+    background-color: #202020;
+    height: 500px;/* MBD */
+    min-width: 940px;
+}
+.contacts {
+    width: 940px;
+    height: 500px;/*MBD */
+    outline: 1px dashed brown;
+    margin: 0 auto;
+}
+.form {
+    outline: 1px solid blue;
+    width: 50%;
+    height: 500px;
+    padding-top: 48px; /*чего паддинг а не margin? */
+}
+.form [type="text"] {
+     background-color: #282828;
+     border: none;
+     padding: 15px 0 15px 0;
+     width: 456px;
+     font-size: 16px;
+     font-family: "Georgia", serif;
+     font-style: italic;
+    position: relative;
+ }
+.form [type="text"]:before {
+    content: "";
+    display: block;
+    background-image: url("img/sprites.png");
+    background-position: 0 -432px ;
+    width: 16px;
+    height: 15px;
+    position: absolute;
+    outline: 1px solid red;
 }
