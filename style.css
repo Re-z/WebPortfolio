@@ -98,10 +98,14 @@ body {
 }
 /*END SOC-BTNS ICONS */
 .slider-wrapper {
-    height: 400px;
+    height: 406px;
     outline: 1px solid white;
     width: 940px;
     background-color: pink;
+    clear: both;
+    position: relative;
+    top: 49px;
+    z-index: 100;
     
 }
 .space {
@@ -110,6 +114,82 @@ body {
     outline: 1px dashed green;
     height: 50px;
 }
-.clearfix {
-    clear: both;
+.radio-wrapper {
+    margin: 0 auto;
+    outline: 1px solid red;
+    background: white;
+    width: 300px;
+}
+.description-wrapper {
+    min-width: 940px;
+    font-family: "Georgia", serif;
+    color: #9B9B9B;/* написал color родителю, а не всем h2 h1 по очереди. Так можно? */ 
+    height: 600px;/* must be del */
+    outline: 1px dashed yellow;
+}
+.description {
+    width: 940px;
+    outline: 1px dashed pink;
+    margin: 0 auto;
+    height: 600px; /*must be del */
+
+}
+.description__welcome-text {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 148px; /*почему HE margin-top, a padding-top? */
+    font-weight: 200;
+}
+.description__title {
+    text-align: center;
+    font-size: 62px;
+    margin-top: 11px;
+    font-weight: 200;
+}
+.description__text-block {
+      display: inline-block;
+  outline: 1px solid red;
+  margin-top: 57px;
+  margin-right: 49px;
+  width: 278px;
+}
+.description__text-block:last-of-type {
+    margin-right: 0;
+}
+.description__block-title1, .description__block-title2, .description__block-title3 {
+    font-size: 20px;
+  letter-spacing: 0.9px;
+  font-weight: 100;
+}
+.description__block-title1:before, .description__block-title2:before, .description__block-title3:before {
+content: "";
+  background-image: url("img/sprites.png");
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 12px;
+
+}
+.description__block-title1:before {
+     background-position: 0 -432px;
+    width: 16px;
+    height: 15px;
+}
+
+.description__block-title2:before {
+      background-position: 0 -137px;
+      width: 16px;
+      height: 19px;
+}
+.description__block-title3:before {
+      background-position: 0 -107px;
+    width: 16px;
+    height: 16px;
+}
+
+.description__text {
+    margin-top: 13px;
+  font-size: 14.5px;
+  font-weight: 100;
+  line-height: 22px;
+  word-wrap: break-word;
 }
