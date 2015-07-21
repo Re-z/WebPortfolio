@@ -225,22 +225,36 @@ content: "";
     padding-top: 48px; /*чего паддинг а не margin? */
 }
 .form [type="text"] {
-     background-color: #282828;
-     border: none;
-     padding: 15px 0 15px 0;
-     width: 456px;
-     font-size: 16px;
-     font-family: "Georgia", serif;
-     font-style: italic;
-    position: relative;
+    background-color: #282828;
+  border: none;
+  background-repeat: no-repeat;
+  padding: 15px 0 15px 44px;
+  width: 456px;
+  font-size: 16px;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  margin-bottom: 21px;
  }
-.form [type="text"]:before {
-    content: "";
-    display: block;
-    background-image: url("img/sprites.png");
-    background-position: 0 -432px ;
-    width: 16px;
-    height: 15px;
-    position: absolute;
-    outline: 1px solid red;
+.form__user-ico {
+  background-position: 15px 15px;
+  background-image: url("img/user-ico.png");
+
+}
+.form__mail-ico {
+    background-position: 15px 15px;
+  background-image: url("img/mail-ico.png");
+}
+.form__globe-ico {
+    background-position: 15px 15px;
+  background-image: url("img/globe-ico.png");
+}
+.form [type="textarea"] {
+      background-color: #282828;
+  border: none;
+  padding: 15px 0 15px 0;
+  width: 456px;
+  height: 157px;
+  font-size: 16px;
+  font-family: "Georgia", serif;
+  font-style: italic;
 }
