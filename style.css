@@ -56,6 +56,9 @@ body {
     list-style: none;
     margin-top: 47px;
 }
+.soc-btns_footer {
+  margin-top: 0;
+}
 .soc-btns__item {
     display: inline-block;
     margin-right: 13px;
@@ -112,7 +115,6 @@ body {
 }
 .radio-wrapper {
     margin: 0 auto;
-    outline: 1px solid red;
     background: white;
     width: 300px;
 }
@@ -207,19 +209,15 @@ content: "";
     margin-top: 8px;
 }
 .contacts-wrapper {
-    outline: 1px solid aquamarine;
     background-color: #202020;
-    height: 500px;/* MBD */
     min-width: 940px;
 }
 .contacts {
     width: 940px;
-    height: 500px;/*MBD */
-    outline: 1px dashed brown;
+    height: 560px;/*MBD */
     margin: 0 auto;
 }
 .form {
-    outline: 1px solid blue;
     width: 50%;
     height: 500px;
     padding-top: 48px; /*чего паддинг а не margin? */
@@ -253,6 +251,7 @@ content: "";
   background-image: url("img/globe-ico.png");
 }
 .form__textarea {
+      padding: 20px 40px;
   color: #7F7F7F;
       background-color: #282828;
   border: none;
@@ -280,7 +279,6 @@ content: "";
 }
 /* Author block */
 .author {
-  outline: 1px solid white;
     width: 50%;
     height: 500px;
     display: inline-block;
@@ -357,4 +355,23 @@ content: "";
 }
 .author__socials-list-item:last-of-type:after {
     content: "";
+}
+/* FOOTER */
+.footer-wrapper {
+    background-color: #202020;
+    min-width: 940px;
+}
+.main-footer {
+    width: 940px;
+    margin: 0 auto;
+    border-top: 1px solid #989898 ;
+    height: 100px; /*mbd */
+        padding-top: 37px;
+}
+.main-footer-text {
+  float: left;
+  font-family: "Georgia",serif;
+    color: #989898;
+    font-size: 14px;
+
 }
