@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css"/>
     <meta name="keywords" content="Portfolio, Web portfolio, photographer"/>
     <meta name="description" content="Web portfolio of John Doe"/>
+    <script src="js/main.js"></script>
+    <script src="js/jquery/jquery-1.11.3.js"></script>
 </head>
 <body>
     <div class="header-wrapper">
@@ -24,7 +26,19 @@
                 </a></li>
             </ul>
             <!--PLACE FOR SLIDER RESERVED-->
-            <div class="slider-wrapper"></div>
+            <div class="slider-wrapper">
+                <ul id="slider">
+                    <div class="slider__btn slider__btn_left"> < </div>
+                    <div class="slider__btn slider__btn_right"> > </div>
+
+                    <li class="slider__item"><img class="slider__img" src="img/slider-item1.png" alt=""/></li>
+                    <li class="slider__item"><img class="slider__img" src="img/slider-item2.jpg" alt=""/></li>
+                    <li class="slider__item"><img class="slider__img" src="img/slider-item3.jpg" alt=""/></li>
+                    <li class="slider__item"><img class="slider__img" src="img/slider-item4.jpg" alt=""/></li>
+                    <li class="slider__item"><img class="slider__img" src="img/slider-item5.png" alt=""/></li>
+
+                </ul>
+            </div>
 
            <!-- <div class="radio-wrapper">
                 <input class="radio-wrapper__radio" type="radio">
@@ -99,7 +113,7 @@
         <div class="footer-wrapper">
             <footer class="main-footer">
                 <p class="main-footer-text">Copyright © 2015 John Doe. All rights reserved</p>
-                 <ul class="soc-btns soc-btns-footer">
+                 <ul class="soc-btns soc-btns_footer">
                 <li class="soc-btns__item"><a class="soc-btns__link twitter-ico" href="">
                 </a></li>
                 <li class="soc-btns__item"><a class="soc-btns__link fb-ico" href="">
@@ -117,7 +131,27 @@
 
 
     </div>
+    <script>
+        var currentSlide = 1;// ? чего это не локальная переменная?
 
+       setInterval(animating, 2000);
+        function animating() {
+            $('#slider').animate({
+                'margin-left': '-=948px'
+            },1000, function() {
+                currentSlide++;
+                if (currentSlide===6) {
+                    currentSlide=1;
+                    $('#slider').css('margin-left', 0);
+                }
+            })
+        }
+
+
+
+
+
+    </script>
 </body>
 </html>
         <!--Верстка Бэм испльзуется в основном для того, чтобы можно было код легко копировать и вставить
@@ -125,3 +159,6 @@
         и нужно ее продублировать в новом месте где этот margin top уже будет мешать. Что делать в таком случае?-->
 
         <!--В каком формате лучше всего сохранять обычные картинки? JPEG or PNG -->
+        <!--Не могу подкючить CDN>
+       <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+        -->

@@ -101,12 +101,31 @@ body {
 .slider-wrapper {
     height: 406px;
     width: 940px;
-    background-color: darkslategrey;
+    overflow: hidden;
     clear: both;
     position: relative;
-    top: 49px;
+    top: 45px;
     z-index: 100;
-    
+}
+.slider {
+    list-style: none;
+}
+.slider__item {
+    float: left;
+    position: relative;
+    z-index: 200;
+}
+.slider__btn {
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    left: 69px;
+    font-weight: bold;
+    z-index: 300;
+    top: 200px;
+    border-radius: 50%;
 }
 .space {
     min-width: 960px;
