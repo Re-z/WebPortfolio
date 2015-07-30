@@ -107,8 +107,9 @@ body {
     top: 45px;
     z-index: 100;
 }
-.slider {
+#slider {
     list-style: none;
+    width: 9999px;
 }
 .slider__item {
     float: left;
@@ -121,11 +122,26 @@ body {
     color: white;
     background-color: rgba(0,0,0,.5);
     position: absolute;
-    left: 69px;
     font-weight: bold;
     z-index: 300;
-    top: 200px;
+    top: 189px;
     border-radius: 50%;
+    display: none;
+}
+.slider__btn:hover {
+  cursor: pointer;
+}
+.slider__btn_left {
+  left: 33px;
+}
+.slider__btn_right {
+  left: 874px;
+}
+.slider__btn-content {
+      text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 24px
 }
 .space {
     min-width: 960px;
