@@ -148,11 +148,31 @@ body {
     background-color: #1F1F1F;
     height: 27px;
 }
+/* RADIO BUTTONS */
 .radio-wrapper {
+    outline: 1px solid red;
+    padding-left: 93px;
     margin: 0 auto;
     background: white;
-    width: 300px;
+    margin-top: 53px;
+    width: 200px;
+    position: relative;
 }
+.radio-wrapper__radio {
+      width: 9px;
+    height: 9px;
+    cursor: pointer;
+}
+/*.radio-wrapper__radio:after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  display: block;
+  position: absolute;
+  background-image: url("img/sprites.png");
+  background-position: 0 -214px
+} */
+
 .description-wrapper {
     min-width: 940px;
     font-family: "Georgia", serif;
