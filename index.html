@@ -132,45 +132,57 @@
 
     </div>
     <script>
+        var imgWidth='948';
         var currentSlide = 1;// ? чего это не локальная переменная?
+        var sliderMargin = $('.slider__item').length * imgWidth;
 
-        
+
         //Move right/left functions
         function sliderMoveLeft() 
         {
-            $('#slider').animate({
-                'margin-left': '-=948px'
-            }, 1000, function()
+            if(currentSlide===$('.slider__item').length) 
             {
-                currentSlide++;
-                if(currentSlide===6) 
+                currentSlide=1;
+                $('#slider').animate(
                 {
-                    currentSlide=1;
-                    $('#slider').css('margin-left', 0)
-                }
-                
-            })
+                    'margin-left': 0
+                }, 1000);
+                return;
+            }
+            currentSlide++;
+
+            $('#slider').animate(
+                {
+                    'margin-left': "-="+imgWidth
+                }, 1000);
         }
+
+
         function sliderMoveRight() 
         {
-            $('#slider').animate({
-                'margin-left': '+=948px'
-            }, 1000, function()
+            if(currentSlide===1) 
             {
-                currentSlide--;
-                if(currentSlide===0) 
+                currentSlide=5//$('.slider__item').length;
+                $('#slider').animate(
                 {
-                    currentSlide=5;
-                    $('#slider').css('margin-left', '-3792px')
-                }
-                
-            })
+                    'margin-left': '-'+ (sliderMargin-imgWidth)
+                }, 1000);
+                return;
+            }
+            currentSlide--;
+
+            $('#slider').animate(
+                {
+                    'margin-left': '+='+imgWidth
+                }, 1000);
         }
        
+
         $('.slider__btn_left').click(sliderMoveLeft)
         $('.slider__btn_right').click(sliderMoveRight)
+        
+
         //Appear and disappear slider buttons
-       
         $('#slider').mouseenter(function(){
             $('.slider__btn').css({display: 'block'})
         })
