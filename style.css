@@ -150,13 +150,11 @@ body {
 }
 /* RADIO BUTTONS */
 .radio-wrapper {
-    outline: 1px solid red;
     padding-left: 93px;
     margin: 0 auto;
     background: white;
     margin-top: 53px;
     width: 200px;
-    position: relative;
 }
 .radio-wrapper__radio {
       width: 9px;

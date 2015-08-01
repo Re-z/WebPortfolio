@@ -41,11 +41,11 @@
             </div>
 
            <div class="radio-wrapper">
-                <input class="radio-wrapper__radio" type="radio" name="slider">
-                <input class="radio-wrapper__radio" type="radio" name="slider" checked>
-                <input class="radio-wrapper__radio" type="radio" name="slider">
-                <input class="radio-wrapper__radio" type="radio" name="slider">
-                <input class="radio-wrapper__radio" type="radio" name="slider">
+                <input id="radio1" class="radio-wrapper__radio" type="radio" name="slider">
+                <input id="radio2" class="radio-wrapper__radio" type="radio" name="slider" checked>
+                <input id="radio3" class="radio-wrapper__radio" type="radio" name="slider">
+                <input id="radio4" class="radio-wrapper__radio" type="radio" name="slider">
+                <input id="radio5" class="radio-wrapper__radio" type="radio" name="slider">
             </div>
 
         </header>
@@ -183,12 +183,16 @@
         
 
         //Appear and disappear slider buttons
-        $('#slider').mouseenter(function(){
+        $('#slider').mouseenter(function()
+        {
             $('.slider__btn').css({display: 'block'})
-        })
-        $('#slider').mouseleave(function(){
+        }).mouseleave(function()
+        {
             $('.slider__btn').css({display: 'none'})
-        })
+        });
+
+
+        //Radio buttons
 
 
     </script>
