@@ -27,10 +27,9 @@
             </ul>
             <!--PLACE FOR SLIDER RESERVED-->
             <div class="slider-wrapper">
+                <div class="slider__btn slider__btn_left"><p class="slider__btn-content"> < </p></div>
+                <div class="slider__btn slider__btn_right"><p class="slider__btn-content"> > </p></div>
                 <ul id="slider">
-                    <div class="slider__btn slider__btn_left"><p class="slider__btn-content"> < </p></div>
-                    <div class="slider__btn slider__btn_right"><p class="slider__btn-content"> > </p></div>
-
                     <li class="slider__item"><img class="slider__img" src="img/slider-item2.jpg" alt=""/></li>
                     <li class="slider__item"><img class="slider__img" src="img/slider-item1.png" alt=""/></li>
                     <li class="slider__item"><img class="slider__img" src="img/slider-item3.jpg" alt=""/></li>
@@ -91,14 +90,21 @@
                 <!--PLACE FOR MINI SLIDER -->
                 <div class="mini-slider-wrapper">
                     <ul id="mini-slider">
-                        <li class="mini-slider__item"><img class="mini-slider__img" src="img/small-slider-photo1.png" alt=""/></li>
+                        <li class="mini-slider__item"><img class="mini-slider__img" src="img/small-slider-photo1.jpg" alt=""/></li>
                         <li class="mini-slider__item"><img class="mini-slider__img" src="img/small-slider-photo2.jpg" alt=""/></li>
                         <li class="mini-slider__item"><img class="mini-slider__img" src="img/small-slider-photo3.jpg" alt=""/></li>
                         <li class="mini-slider__item"><img class="mini-slider__img" src="img/small-slider-photo4.jpg" alt=""/></li>
                         <li class="mini-slider__item"><img class="mini-slider__img" src="img/small-slider-photo5.jpg" alt=""/></li>
-
                     </ul>
-
+                    <div class="mini-slider__pop-up">
+                        <div class="mini-slider__btn mini-slider__btn_left">
+                            <p class="mini-slider__btn-content"> < </p>
+                        </div>
+                        <div class="mini-slider__btn mini-slider__btn_right">
+                            <p class="mini-slider__btn-content"> > </p>
+                        </div>
+                        <p class="mini-slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem facilis laudantium necessitatibus nemo neque quod reiciendis. </p>
+                    </div>
                 </div>
             </section>
 
@@ -204,7 +210,7 @@
         
 
         //Appear and disappear slider buttons
-        $('#slider').mouseenter(function()
+        $('.slider-wrapper').mouseenter(function()
         {
             $('.slider__btn').css({display: 'block'})
         }).mouseleave(function()
@@ -268,7 +274,45 @@
                     },1000)
         });
         //Radio finished
+    //start minisluder
+    $('.mini-slider-wrapper').hover(function() {
+        $('.mini-slider__pop-up').fadeToggle(400)
+    });
+        //right/left buttons animation
+        var minSlCurSlide=1;
+        var minSlimgWidth=465;
+        $('.mini-slider__btn_left').click(function(){
+            if(minSlCurSlide===5)
+            {
+                minSlCurSlide=1;
+                $('#mini-slider').animate({
+                    'margin-left': 0
+                }, 1000);
+                return;
+            }
+            minSlCurSlide++;
+            $('#mini-slider').animate({
+                    'margin-left': '-=465px'
+            },1000)
+        });
 
+        $('.mini-slider__btn_right').click(function()
+        {
+            if(minSlCurSlide===1)
+            {
+                minSlCurSlide=5;
+                $('#mini-slider').animate(
+                        {
+                            'margin-left': '-'+minSlimgWidth*(minSlCurSlide-1)
+                        },1000);
+                return;
+            }
+            minSlCurSlide--;
+            $('#mini-slider').animate(
+                    {
+                        'margin-left': '+=465px'
+                    }, 1000);
+        })
 
     </script>
 </body>
@@ -281,3 +325,5 @@
         <!--Не могу подкючить CDN>
        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
         -->
+        <!--Перенос строки в css-->
+        <!--Не работает overflow:hidden с картинками -->
