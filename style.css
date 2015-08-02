@@ -48,7 +48,7 @@ body {
     color: #9B9B9B;
     font-weight: 300;
     margin-top: 47px; /* НЕ ПОЙМУ ПОЧЕМУ НЕ MARGIN TOP?? И ЕСЛИ ДЕЛАЮ MARGIN ТО НАЧИНАЕТ ЕХАТЬ .HEADER_WRAPPER */
-    letter-spacing: .3px;
+    letter-spacing: 0.3px;
     float: left;
 }
 .soc-btns {
@@ -112,6 +112,7 @@ body {
     width: 9999px;
     margin-left: -948px;
 }
+
 .slider__item {
     float: left;
     position: relative;
@@ -251,19 +252,28 @@ content: "";
 }
 .portfolio {
     width: 940px;
+    height: 760px;
     margin: 0 auto;
-    height: 763px;/*must be del */
+    padding-top: 66px;
 }
 .imgs-wrapper {
     width: 50%;/*must be del */
     height: 675px;
-    padding-top: 66px; /* почему padding а не margin??? */
+    float: left;
 }
 .imgs-wrapper__img {
     display: inline-block;
     margin-right: 5px;
-    margin-top: 8px;
+    margin-bottom: 8px;
 }
+
+.mini-slider-wrapper {
+    width: 465px;
+    outline: 1px solid red;
+    height: 602px;
+    overflow: hidden;
+}
+
 .contacts-wrapper {
     background-color: #202020;
     min-width: 940px;
