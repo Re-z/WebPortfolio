@@ -31,8 +31,8 @@
                     <div class="slider__btn slider__btn_left"><p class="slider__btn-content"> < </p></div>
                     <div class="slider__btn slider__btn_right"><p class="slider__btn-content"> > </p></div>
 
-                    <li class="slider__item"><img class="slider__img" src="img/slider-item1.png" alt=""/></li>
                     <li class="slider__item"><img class="slider__img" src="img/slider-item2.jpg" alt=""/></li>
+                    <li class="slider__item"><img class="slider__img" src="img/slider-item1.png" alt=""/></li>
                     <li class="slider__item"><img class="slider__img" src="img/slider-item3.jpg" alt=""/></li>
                     <li class="slider__item"><img class="slider__img" src="img/slider-item4.jpg" alt=""/></li>
                     <li class="slider__item"><img class="slider__img" src="img/slider-item5.png" alt=""/></li>
@@ -40,13 +40,23 @@
                 </ul>
             </div>
 
-           <div class="radio-wrapper">
-                <input id="radio1" class="radio-wrapper__radio" type="radio" name="slider">
-                <input id="radio2" class="radio-wrapper__radio" type="radio" name="slider" checked>
-                <input id="radio3" class="radio-wrapper__radio" type="radio" name="slider">
-                <input id="radio4" class="radio-wrapper__radio" type="radio" name="slider">
-                <input id="radio5" class="radio-wrapper__radio" type="radio" name="slider">
-            </div>
+           <div class="slider__radios">
+               <label class="slider__radio-label" for="radio1">
+                    <input id="radio1" class="slider__radio" type="radio" name="slider">
+               </label>
+               <label class="slider__radio-label slider__radio-label_checked" for="radio2">
+                   <input id="radio2" class="slider__radio" type="radio" name="slider">
+               </label>
+               <label class="slider__radio-label" for="radio3">
+                   <input id="radio3" class="slider__radio" type="radio" name="slider">
+               </label>
+               <label id="radio4__label" class="slider__radio-label" for="radio4">
+                   <input id="radio4" class="slider__radio" type="radio" name="slider">
+               </label>
+               <label class="slider__radio-label" for="radio5">
+                   <input id="radio5" class="slider__radio" type="radio" name="slider">
+               </label>
+           </div>
 
         </header>
         <div class="space"></div>
@@ -133,7 +143,7 @@
     </div>
     <script>
         var imgWidth='948';
-        var currentSlide = 1;// ? чего это не локальная переменная?
+        var currentSlide = 2;// ? чего это не локальная переменная?
         var sliderMargin = $('.slider__item').length * imgWidth;
 
 
@@ -162,7 +172,7 @@
         {
             if(currentSlide===1) 
             {
-                currentSlide=5//$('.slider__item').length;
+                currentSlide=5;//$('.slider__item').length;
                 $('#slider').animate(
                 {
                     'margin-left': '-'+ (sliderMargin-imgWidth)
@@ -178,8 +188,8 @@
         }
        
 
-        $('.slider__btn_left').click(sliderMoveLeft)
-        $('.slider__btn_right').click(sliderMoveRight)
+        $('.slider__btn_left').click(sliderMoveLeft);
+        $('.slider__btn_right').click(sliderMoveRight);
         
 
         //Appear and disappear slider buttons
@@ -193,6 +203,60 @@
 
 
         //Radio buttons
+    $('.slider__radio-label').click(function()
+    {
+       if($('.slider__radio-label').hasClass('slider__radio-label_checked'))
+       {
+           $('.slider__radio-label').removeClass('slider__radio-label_checked');
+           $(this).addClass('slider__radio-label_checked');
+       }
+    });
+
+    $('#radio1').click(function ()
+        {
+            currentSlide=1;
+            $('#slider').animate(
+                    {
+                        'margin-left': 0
+                    },1000)
+        });
+
+    $('#radio2').click(function ()
+        {
+            currentSlide=2;
+            $('#slider').animate(
+                    {
+                        'margin-left': "-"+imgWidth*(currentSlide-1)
+                    },1000)
+        });
+
+    $('#radio3').click(function ()
+        {
+            currentSlide=3;
+            $('#slider').animate(
+                    {
+                        'margin-left': "-"+imgWidth*(currentSlide-1)
+                    },1000)
+        });
+
+    $('#radio4').click(function ()
+        {
+            currentSlide=4;
+            $('#slider').animate(
+                    {
+                        'margin-left': "-"+imgWidth*(currentSlide-1)
+                    },1000)
+        });
+
+    $('#radio5').click(function ()
+        {
+            currentSlide=5;
+            $('#slider').animate(
+                    {
+                        'margin-left': "-"+imgWidth*(currentSlide-1)
+                    },1000)
+        });
+
 
 
     </script>

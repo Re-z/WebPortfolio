@@ -110,6 +110,7 @@ body {
 #slider {
     list-style: none;
     width: 9999px;
+    margin-left: -948px;
 }
 .slider__item {
     float: left;
@@ -149,27 +150,29 @@ body {
     height: 27px;
 }
 /* RADIO BUTTONS */
-.radio-wrapper {
+.slider__radios {
     padding-left: 93px;
     margin: 0 auto;
     background: white;
     margin-top: 53px;
     width: 200px;
 }
-.radio-wrapper__radio {
-      width: 9px;
-    height: 9px;
-    cursor: pointer;
+.slider__radio {
+    display: none;
 }
-/*.radio-wrapper__radio:after {
-  content: "";
-  width: 9px;
-  height: 9px;
-  display: block;
-  position: absolute;
-  background-image: url("img/sprites.png");
-  background-position: 0 -214px
-} */
+
+.slider__radio-label {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #A5A5A5;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider__radio-label_checked {
+    background-color: #5D5D5D;
+}
 
 .description-wrapper {
     min-width: 940px;
