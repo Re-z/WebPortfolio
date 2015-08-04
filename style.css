@@ -26,13 +26,11 @@
     box-sizing: border-box;
 }
 body {
-    background: black   ; /* MUST BE DELETED */
     border: 2px solid #242424;
 }
 /*START HEADER */
 .header-wrapper {
     min-width: 940px;
-    height: 386px; /* ??? */
     background: url("img/bg1.png")repeat;
     border-bottom: 2px solid #202020;
 
@@ -47,7 +45,7 @@ body {
     font-size: 18px;
     color: #9B9B9B;
     font-weight: 300;
-    margin-top: 47px; /* НЕ ПОЙМУ ПОЧЕМУ НЕ MARGIN TOP?? И ЕСЛИ ДЕЛАЮ MARGIN ТО НАЧИНАЕТ ЕХАТЬ .HEADER_WRAPPER */
+    margin-top: 47px;
     letter-spacing: 0.3px;
     float: left;
 }
@@ -146,7 +144,7 @@ body {
     font-size: 24px
 }
 .space {
-    min-width: 960px;
+    min-width: 940px;
     background-color: #1F1F1F;
     height: 27px;
 }
@@ -185,7 +183,6 @@ body {
 .description {
     width: 940px;
     margin: 0 auto;
-    height: 600px; /*must be del */
 
 }
 .description__welcome-text {
@@ -257,7 +254,7 @@ content: "";
     padding-top: 77px;
 }
 .imgs-wrapper {
-    width: 50%;/*must be del */
+    width: 50%;
     height: 675px;
     float: left;
 }
@@ -333,7 +330,7 @@ content: "";
 }
 .contacts {
     width: 940px;
-    height: 560px;/*MBD */
+    height: 560px;
     margin: 0 auto;
 }
 .form {
