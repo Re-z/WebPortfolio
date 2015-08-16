@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="style.css"/>
     <meta name="keywords" content="Portfolio, Web portfolio, photographer"/>
     <meta name="description" content="Web portfolio of John Doe"/>
-
-    <script src="js/jquery/jquery-1.11.3.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="header-wrapper">
@@ -26,7 +23,6 @@
                 <li class="soc-btns__item"><a class="soc-btns__link globe-ico" href="">
                 </a></li>
             </ul>
-            <!--PLACE FOR SLIDER RESERVED-->
             <div class="slider-wrapper">
                 <div class="slider__btn slider__btn_left"><p class="slider__btn-content"> < </p></div>
                 <div class="slider__btn slider__btn_right"><p class="slider__btn-content"> > </p></div>
@@ -36,10 +32,8 @@
                     <li class="slider__item"><img class="slider__img" src="img/slider-item3.jpg" alt=""/></li>
                     <li class="slider__item"><img class="slider__img" src="img/slider-item4.jpg" alt=""/></li>
                     <li class="slider__item"><img class="slider__img" src="img/slider-item5.png" alt=""/></li>
-
                 </ul>
             </div>
-
            <div class="slider__radios">
                <label class="slider__radio-label" for="radio1">
                     <input id="radio1" class="slider__radio" type="radio" name="slider">
@@ -59,7 +53,8 @@
            </div>
 
         </header>
-        <div class="space"></div>
+    </div>
+    <div class="space"></div>
         <div class="description-wrapper">
             <section class="description">
                 <h2 class="description__welcome-text">~ Welcome to my portfolio ~</h2>
@@ -88,7 +83,6 @@
                     <img class="imgs-wrapper__img" src="img/photo5.png" alt="lorem"/>
                     <img class="imgs-wrapper__img" src="img/photo6.png" alt="lorem"/>
                 </div>
-                <!--PLACE FOR MINI SLIDER -->
                 <div class="mini-slider-wrapper">
                     <ul id="mini-slider">
                         <li class="mini-slider__item"><img class="mini-slider__img" src="img/small-slider-photo1.jpg" alt=""/></li>
@@ -134,13 +128,12 @@
                             <li class="author__socials-list-item"><a class="author__socials-link" href="">Twitter</a></li>
                             <li class="author__socials-list-item"><a class="author__socials-link" href="">Facebook</a></li><li class="author__socials-list-item"><a class="author__socials-link" href="">Dribble</a></li><li class="author__socials-list-item"><a class="author__socials-link" href="">Flickr</a></li>
                         </ul>
-
                 </div>
             </section>
         </div>
         <div class="footer-wrapper">
             <footer class="main-footer">
-                <p class="main-footer-text">Copyright © 2015 John Doe. All rights reserved</p>
+                <p class="main-footer__text">Copyright © 2015 John Doe. All rights reserved</p>
                  <ul class="soc-btns soc-btns_footer">
                 <li class="soc-btns__item"><a class="soc-btns__link twitter-ico" href="">
                 </a></li>
@@ -154,20 +147,9 @@
                 </a></li>
             </ul>
             </footer>
-        </div>
-
-
-
     </div>
+    <script src="js/jquery/jquery-1.11.3.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/html5shiv/src/html5shiv.js"></script>
 </body>
 </html>
-        <!--Верстка Бэм испльзуется в основном для того, чтобы можно было код легко копировать и вставить
-        в другую часть кода, верно? А что, если вот есть форма, к примеру, а у нее задан margin-top 10px
-        и нужно ее продублировать в новом месте где этот margin top уже будет мешать. Что делать в таком случае?-->
-
-        <!--В каком формате лучше всего сохранять обычные картинки? JPEG or PNG -->
-        <!--Не могу подкючить CDN>
-       <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
-        -->
-        <!--Перенос строки в css-->
-        <!--Не работает overflow:hidden с картинками -->

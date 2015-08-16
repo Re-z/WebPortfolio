@@ -161,17 +161,38 @@ $('document').ready(function(){
             $('#mini-slider').animate({
                     'margin-left': '-=465px'
             },1000)
-        })
+        });
 
-        /*function radioDep() {
-        	if(currentSlide===4) 
-        	{
-        		$('.slider__radio-label').removeClass('slider__radio-label_checked');
-        		$('#radio4__label').addClass('slider__radio-label_checked');
-        	}
+
+        //move radio buttons
+        function radioDep() {
+        	if(currentSlide===1)
+            {
+                $('.slider__radio-label').removeClass('slider__radio-label_checked');
+                $('.slider__radio-label[for="radio1"]').addClass('slider__radio-label_checked');
+            }
+            else if(currentSlide===2)
+            {
+                $('.slider__radio-label').removeClass('slider__radio-label_checked');
+                $('.slider__radio-label[for="radio2"]').addClass('slider__radio-label_checked');
+            }
+            else if(currentSlide===3)
+            {
+                $('.slider__radio-label').removeClass('slider__radio-label_checked');
+                $('.slider__radio-label[for="radio3"]').addClass('slider__radio-label_checked');
+            }
+            else if(currentSlide===4)
+            {
+                $('.slider__radio-label').removeClass('slider__radio-label_checked');
+                $('.slider__radio-label[for="radio4"]').addClass('slider__radio-label_checked');
+            }
+            else if(currentSlide===5)
+            {
+                $('.slider__radio-label').removeClass('slider__radio-label_checked');
+                $('.slider__radio-label[for="radio5"]').addClass('slider__radio-label_checked');
+            }
         }
-
-        radioDep(); -----не пашет */ 
+        $('.slider__btn').click(radioDep);
 
 
 
